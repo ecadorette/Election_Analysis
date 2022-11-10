@@ -2,34 +2,22 @@
 Module3
 
 ## Project Overview
-Co-worker Tom provided the following tasks to complete the election audit of a recent local congressional election.
+Co-worker Tom assigned a project to complete the election audit of a recent local congressional election. The analysis will determine the county with the most votes and the winner of the election. Python and Visual Studio Code were used to perform this analysis. The full analysis is below as well as printed in the election_results.txt file.
 
-1. Calculate the total number of votes
-2. Get a complete list of candidates who received votes.
-3. Calculate the total number of votes each candidate received. 
-4. Calculate the percentage of votes each candidate won. 
-5. Determine the winner of the election based on popular vote.
-
-## Resources
-- Data Source: election_results.csv
-- Software: Python 3.7.6, Visual Studio Code, 1.73.0
-
-## Summary
-The analysis of the election shows that:
+## Election-Audit Results:
 - There were 369,711 total votes cast in the election
-- The candidates were:
-  - Charles Casper Stockham
-  - Diana DeGette
-  - Raymon Anthony Doane
-- The candidate results were:
-  - Chales Casper Stockham received 23.0% of the vote and 85,213 votes
-  - Diana DeGette received 73.8% of the vote and 272,892 votes
-  - Raymon Anthony Doane received 3.1% of the vote and 11,606 votes
+- Votes were broken down by each county in the precinct using `for` and `if` statements in Python. The county restults are shown below:
+
+  ![County_Votes](https://user-images.githubusercontent.com/114450503/200968319-24af45bd-58b5-4a5f-bbe7-868572cf96a0.png)
+- Denver had the largest number of votes
+
+- The candidates and their respective votes were also determined using `for` and `if` statements, their results are shown below:
+
+  ![Votes_by_candidate](https://user-images.githubusercontent.com/114450503/200968172-4fe1afd8-50c4-47d3-a12f-04f30565ed56.png)
 - The Winner of the election was:
   - Diana DeGette who received 73.8% of the vote and 272,892 votes
   
-## Challenge Overview
-The challenge was conducted using Python in the Visual Studio Code. The main functions used to complete the analysis were `for` loops with nested `if` statements. The `csv` dependancy was also used to read and write csv and txt files. 
+## Election-Audit Summary
+The code used to produce this analysis could easily be scaled to larger elections and more detailed data sources. If the raw data included states instead of (or in addition to) counties, the votes per state could be calculated using the same method as votes per county. Similar calculations could be used if any demographic information was provided in the raw data, such as age, declared party, or salary range of the voters.
 
-## Challenge Summary
-Using the `csv` dependancy can be very useful for analyzing large sets of data and sumarizing data on a separate file that can be shared with stakeholders. Utilizing Python for this challenge allowed for a quick analysis of the data with minimal amount of code. 
+The code could also be modified to include more in-depth analysis such as majority winner of the votes as well as the winner by total count. 
